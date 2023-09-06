@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reset Password</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ccccc2;
+        }
+        .bo {
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+        .success-message {
+            display: none;
+            color: rgb(69, 20, 160);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bo">
+    <div id="formContainer">
+        <h1>Reset Password</h1>
+
+        <label for="oldPassword">Old :</label>
+        <br>
+        <input type="password" id="oldPassword" placeholder="Enter Old Password">
+        <br><br>
+
+        <label for="newPassword">New :</label>
+        <br>
+        <input type="password" id="newPassword" placeholder="Enter New Password">
+        <br><br>    
+
+        <label for="confirmPassword">Confirm :</label>
+        <br>
+        <input type="password" id="confirmPassword" placeholder="Enter Confirm Password">
+        <br><br>
+
+        <button id="submitButton">Submit</button>
+        <br><br>
+        <p class="success-message" id="successMessage">Password reset successfully</p>
+    </div>
+
+    <script>
+        const submitButton = document.getElementById("submitButton");
+        const successMessage = document.getElementById("successMessage");
+
+        submitButton.addEventListener("click", function() {
+            successMessage.style.display = "block";
+            setTimeout(function() {
+             window.location.href = "Login Form.html";
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
